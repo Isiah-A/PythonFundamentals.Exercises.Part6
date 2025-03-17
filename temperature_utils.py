@@ -45,3 +45,14 @@ def temperature_tuple(temperatures: Iterable, input_unit_of_measurement: str) ->
         temps = tuple(temp)
         convert = zip(temperatures, temps)
         return tuple(convert)
+    elif input_unit_of_measurement == 'a':
+        temp = []
+        for i in temperatures:
+            temp.append(convert_to_kelvin(i))
+            temps = tuple(temp)
+            convert = zip(temperatures, temp)
+            return tuple(convert)
+
+
+def convert_to_kelvin(kelvin_temp: float) -> int:
+    return round((kelvin_temp - 273.15) * (9 / 5 + 32))

@@ -40,3 +40,9 @@ class TemperatureUtilsTest(unittest.TestCase):
     def test3_temperature_tuple(self):
         temps_input = (1, 2, 3)
         self.assertEqual(tuple(), temperature_utils.temperature_tuple(temps_input, "a"))
+
+    def test4_temperature_tuple(self):
+        temps_input = (32, 44, 105)
+        expected = ((32, -8151),)
+        actual = temperature_utils.temperature_tuple(temps_input, "a")
+        self.assertEqual(expected, actual)
