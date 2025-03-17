@@ -42,7 +42,7 @@ def print_indexes_and_entries(indexes: Iterable, entries: Iterable) -> None:
     :return: None
     """
     for i, value in zip(indexes, entries):
-        print(f"{indexes} {entries}")
+        print(f"Index: {i} \tEntry: {value}")
 
 
 def print_items_with_index(items: Iterable):
